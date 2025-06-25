@@ -16,11 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let vc = ViewController()
-        let navController = UINavigationController(rootViewController: vc)
+        let mainVC = ModelBuilder.createMain()
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = navController
+        window?.rootViewController = mainVC
         window?.makeKeyAndVisible()
         
     }
